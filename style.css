@@ -1,0 +1,263 @@
+:root {
+    /* Colors */
+    --primary-color: #10b981;
+    --background-color: #000;
+    --text-primary: #e5e5e5;
+    --text-secondary: #9ca3af;
+    --accent-color: #fbbf24;
+
+    /* Background elements */
+    --card-background: rgba(24, 24, 27, 0.5);
+    --shortcut-background: rgba(39, 39, 42, 0.5);
+    --border-color: rgba(16, 185, 129, 0.4);
+
+    /* Graphs */
+    --cpu-graph-color: rgba(16, 185, 129, 0.5);
+    --ram-graph-color: rgba(59, 130, 246, 0.5);
+    --storage-graph-color: rgba(139, 92, 246, 0.5);
+
+    /* Effects */
+    --glow-strength: 0.2;
+    --dot-size: 1px;
+    --dot-spacing: 24px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Dot pattern background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) var(--dot-size), transparent var(--dot-size));
+    background-size: var(--dot-spacing) var(--dot-spacing);
+    background-position: -12px -12px;
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.3),
+        inset 0 0 10px rgba(16, 185, 129, var(--glow-strength));
+}
+
+/* Rest of the styles remain the same */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+}
+
+.main-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Updated styles for dot and main text separation */
+.dot {
+    color: var(--primary-color);
+    font-size: larger;
+    position: relative;
+    width: 12px;
+    display: inline-block;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.dot::before {
+    content: '•';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(2px);
+    animation: glow 2s ease-in-out infinite;
+}
+
+.main-text {
+    opacity: 0.7;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 5px rgba(16, 185, 129, 0.8),
+            0 0 10px var(--cpu-graph-color),
+            0 0 15px rgba(16, 185, 129, 0.3);
+    }
+
+    50% {
+        text-shadow: 0 0 10px rgba(16, 185, 129, 1),
+            0 0 20px rgba(16, 185, 129, 0.7),
+            0 0 30px var(--cpu-graph-color);
+    }
+}
+
+
+.time {
+    color: #fbbf24;
+    font-size: 0.875rem;
+}
+
+.top-links {
+    display: flex;
+    gap: 1rem;
+    opacity: 0.7;
+    font-size: 0.875rem;
+}
+
+.app-shortcuts {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+.shortcut {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--shortcut-background);
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+    font-size: 0.875rem;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.metric-label {
+    color: var(--text-secondary);
+}
+
+.metric-value {
+    color: #34d399;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    background-color: var(--card-background);
+    border: 1px solid #27272a;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.graph {
+    height: 6rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.25rem;
+}
+
+.bar {
+    width: 0.5rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.bar.cpu {
+    background-color: var(--cpu-graph-color);
+}
+
+.bar.ram {
+    background-color: var(--ram-graph-color);
+}
+
+.bar.storage {
+    background-color: var(--storage-graph-color);
+}
+
+.logs {
+    margin-top: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+.log-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
