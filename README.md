@@ -15,14 +15,13 @@ Simply open `index.html` in a web browser. No build process or dependencies requ
 
 ## Customization
 The dashboard can be customized by modifying the CSS variables:
-
+(purple theme)
 ```css
 :root {
-  --primary-color: #10b981;
-  --background-color: #000;
-  --card-background: rgba(24, 24, 27, 0.5);
-  --border-color: rgba(16, 185, 129, 0.3);
-  --text-primary: #e5e5e5;
-  --text-secondary: #9ca3af;
+  --primary-color: #8b5cf6;
+  --border-color: rgba(139, 92, 246, 0.3);
+  --cpu-graph-color: rgba(139, 92, 246, 0.5);
+  --ram-graph-color: rgba(168, 85, 247, 0.5);
+  --storage-graph-color: rgba(147, 51, 234, 0.5);
 }
 ```
