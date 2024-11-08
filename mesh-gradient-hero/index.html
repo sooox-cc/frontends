@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Hero Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="layout-container">
+        <!-- Hero section with grid -->
+        <div class="hero-container">
+            <div class="grid-background"></div>
+            <div class="hero-content">
+                <h1>Your complete platform<br>for the web.</h1>
+                <p>Build, scale, and secure a faster, more personalized web with developer tools and cloud
+                    infrastructure.</p>
+
+                <div class="button-group">
+                    <button class="button button-primary">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-caret-up-fill" style="height: 50%;" viewBox="0 0 16 16">
+                                <path
+                                    d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                            </svg>
+                        </span>
+                        Start Deploying
+                    </button>
+                    <button class="button button-secondary">
+                        Get a Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Text section below -->
+        <div class="text-section">
+            <div class="metrics">
+                <h2>
+                    runway <span>build times went from 7m to 40s.</span><br>
+                    Leonardo.AI <span>saw a 95% reduction in page load times.</span><br>
+                    zapier <span>saw 24x faster builds.</span>
+                </h2>
+            </div>
+
+            <div class="description">
+                Get started using our pre-built templates. Easily stream long-running LLM responses for a better user
+                experience with zero-config infrastructure that's always globally performant.
+            </div>
+        </div>
+    </div>
+
+    <div class="layout-container">
+        <!-- New features section -->
+        <div class="features-section">
+            <div class="feature-column">
+                <div class="feature-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-terminal" viewBox="0 0 16 16">
+                        <path
+                            d="M6 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3A.5.5 0 0 1 6 9M3.854 4.146a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708z" />
+                        <path
+                            d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" />
+                    </svg>
+                    Git-connected Deploys
+                </div>
+                <h3 class="feature-title">From localhost to https, in seconds.</h3>
+                <p class="feature-subtitle">Deploy from Git or your CLI.</p>
+
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dot"></div>
+                        <div class="terminal-dot"></div>
+                        <div class="terminal-dot"></div>
+                    </div>
+                    <div class="terminal-line">~ vercel-site/ git push</div>
+                    <div class="terminal-line">Enumerating objects: 1, done.</div>
+                    <div class="terminal-line">Counting objects: 100% (1/1), done.</div>
+                    <div class="terminal-line">Writing objects: 100% (1/1), 72 bytes, done.</div>
+                    <div class="terminal-line">Total 1 (delta 0), reused 0 (delta 0).</div>
+                    <div class="terminal-line">To github.com:vercel/vercel-site.git</div>
+                    <div class="terminal-line"> 21326a9..8</div>
+                </div>
+
+                <div class="preview-window">
+                    What will you ship?
+                </div>
+            </div>
+
+            <div class="feature-column">
+                <div class="feature-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chat-dots" viewBox="0 0 16 16">
+                        <path
+                            d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        <path
+                            d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9 9 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.4 10.4 0 0 1-.524 2.318l-.003.011a11 11 0 0 1-.244.637c-.079.186.074.394.273.362a22 22 0 0 0 .693-.125m.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6-3.004 6-7 6a8 8 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a11 11 0 0 0 .398-2" />
+                    </svg>
+                    Collaborative pre-production
+                </div>
+                <h3 class="feature-title">Every deploy is remarkable.</h3>
+                <p class="feature-subtitle">Chat with your team on real, production-grade UI, not just designs.</p>
+
+                <div class="chat-container">
+                    <div class="chat-bubble">
+                        Swapped out the <span class="highlight">button</span> for some variants we needed.
+                    </div>
+                    <div class="chat-bubble">
+                        <div class="chat-user">
+                            <span class="user-badge blue">Pranathi</span>
+                        </div>
+                        How about this instead?
+                    </div>
+                    <div class="chat-bubble chat-right">
+                        <div class="chat-user">
+                            <span class="user-badge red">Rauno</span>
+                        </div>
+                        I like it. Does this work with the brand tweaks @mamuso?
+                    </div>
+                    <div class="chat-bubble">
+                        This looks great! 👍
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

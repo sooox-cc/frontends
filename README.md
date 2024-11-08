@@ -13,6 +13,16 @@ A sleek, dark-themed monitoring dashboard featuring:
 - Glowing accents and smooth transitions
 - [View Details](./dev-dashboard/README.md)
 
+### Mesh Gradient Hero
+A modern landing page hero section featuring:
+- Precise 12-column grid system
+- Dynamic gradient backgrounds
+- Interactive chat interface
+- Terminal window simulation
+- Connected section design
+- View Details
+- [View Details](./mesh-gradient-hero/README.md)
+
 ## Project Structure
 ```
 frontends/
@@ -21,7 +31,11 @@ frontends/
 │   ├── style.css
 │   ├── script.js
 │   └── README.md
-├── [future-project]/      # Coming soon
+├── mesh-gradient-hero/     # Landing page hero section
+│   ├── index.html
+│   ├── style.css
+│   └── README.md
+├── [future-project]/       # Coming soon
 └── README.md
 ```
 
