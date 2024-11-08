@@ -147,8 +147,19 @@ body::before {
 
 
 .time {
-    color: #fbbf24;
-    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.time-good {
+    color: var(--primary-color);
+}
+
+.time-warning {
+    color: var(--accent-color);
+}
+
+.time-high {
+    color: #ef4444;
 }
 
 .top-links {
