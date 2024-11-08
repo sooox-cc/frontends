@@ -1,27 +1,43 @@
-# Dev Dashboard
+# Frontend Styling Exercises
 
-A sleek, modern monitoring dashboard with a dark theme and real-time metrics display.
+A collection of frontend UI designs showcasing different styling techniques and design patterns.
 
-![image](https://github.com/user-attachments/assets/1e2825ef-f70d-495c-bc77-b8c33c4915c7)
+## Projects
 
-## Features
-- Pure html and CSS
-- Clean, minimal dark interface with subtle dot-matrix background
-- Responsive design that works on all screen sizes
-- Smooth animations and visual feedback
+### Dev Dashboard
+A sleek, dark-themed monitoring dashboard featuring:
+- Real-time system metrics visualization
+- Animated status indicators
+- Responsive grid layout
+- Custom dot-matrix background pattern
+- Glowing accents and smooth transitions
+- [View Details](./dev-dashboard/README.md)
 
-## Usage
-Simply open `index.html` in a web browser. No build process or dependencies required.
-
-## Customization
-The dashboard can be customized by modifying the CSS variables:
-(purple theme)
-```css
-:root {
-  --primary-color: #8b5cf6;
-  --border-color: rgba(139, 92, 246, 0.3);
-  --cpu-graph-color: rgba(139, 92, 246, 0.5);
-  --ram-graph-color: rgba(168, 85, 247, 0.5);
-  --storage-graph-color: rgba(147, 51, 234, 0.5);
-}
+## Project Structure
 ```
+frontends/
+├── dev-dashboard/          # Modern monitoring dashboard
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│   └── README.md
+├── [future-project]/      # Coming soon
+└── README.md
+```
+
+## Adding New Projects
+Each project should:
+1. Have its own directory with complete frontend implementation
+2. Include a detailed README explaining features and customization
+3. Demonstrate specific styling techniques or design patterns
+
+## Tech Stack
+- HTML5
+- CSS3
+- JavaScript
+
+## Contributing
+Feel free to contribute your own frontend designs! Each submission should:
+- Focus on a specific UI/UX pattern or design challenge
+- Include clear documentation
+- Follow the established project structure
